@@ -1,0 +1,5 @@
+1. npm init -y -> Para crear un package.json
+2. npm i express -> Instalar servidor de express
+3. Agregar al package.json -> "start": "node index.js"
+4.npm i -D nodemon
+5. Añadir al package.json -> "server": "nodemon index.js"
