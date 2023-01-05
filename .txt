@@ -5,3 +5,25 @@
 5. Añadir al package.json -> "server": "nodemon index.js"
 
 6.Carpet routes y uso de app.use
+
+Quinta Seccion: Template Engine
+1. npm i pug
+2. index.js : 
+//Habilitar pug
+app.set('view engine', 'pug')       //set es para agregar configuracion, le decimos que usaremos pug
+app.set('views', './views')         //Le decimos donde estan nuestras vistas
+3. Creamos la carpetas views
+
+Sexta seccion: Tailwindcss
+1. npm i -D tailwindcss autoprefixer postcss postcss-cli
+2. index.js:
+//Carpeta publica
+app.use(express.static('public'));
+3.Carpeta public/css/tailwind.css -> 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+4.npx tailwindcss init -p
+5. tailwind.config.cjs
+content: ['./views/**/*.pug'],
+6.package.json "css":"postcss public/css/tailwind.css -o public/css/app.css --watch"
